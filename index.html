@@ -4,8 +4,31 @@
 	<title>Solar System Array-Methods Spa Exercise</title>
 </head>
 <body>
+	<!-- Dragula tags -->
+	<link rel="stylesheet" href="node_modules/dragula/dist/dragula.css"> 
+	<link rel="stylesheet" href="node_modules/dragula/dist/dragula.min.css"> 
 		<h2>Solar System</h2>
-		<p id="planets"></p>
+
+		<div id="drag-container-left" style="border:1px solid black;">
+				<p id="planets" class="draggable"></p>
+		</div>
+		<br>
+		<br>
+
+		<div id="drag-container-right" style="border:1px solid black;">
+			<p class="draggable">Item</p>
+		</div>
+
+
 		<script type="text/javascript" src="array-methods.js"></script>
+		<!-- <script type="text/javascript" src="node_modules/dragula/dist/dragula.js"></script> -->
+		<script type="text/javascript" src="node_modules/dragula/dist/dragula.min.js"></script>
+		<script>      
+			dragula([document.getElementById("drag-container-left"), document.getElementById("drag-container-right")], {
+			moves: function (el, container, handle) {
+				return handle.classList.contains('draggable');
+			}
+			});
+		</script>
 </body>
 </html>

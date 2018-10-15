@@ -9,7 +9,12 @@ var divPlanets = document.getElementById('planets');
 planets.forEach(function(item){
 	//add each planet to div id "planets"
 	divPlanets.innerHTML += item + " ";
+
 });
+
+// planets.forEach(function(i){
+// 	i.toUpperCase();
+// });
 
 
 
