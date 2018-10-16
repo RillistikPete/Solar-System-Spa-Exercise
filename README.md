@@ -1,4 +1,4 @@
 # Solar-System-Spa-Exercise
-
-## Dragula
+### JavaScript
+### Dragula
 
